@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,5 +13,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    // return view('welcome');
+    // $viewData = [];
+    // $viewData['title'] = "Home Page - Online Shopping";
+    // return view('frontend.home.index')->with("viewData",$viewData);
 });
+
+ Route::get('/about',' App\Http\Controllers\Frontend\HomeController@about')->name('about-us');
+ 
