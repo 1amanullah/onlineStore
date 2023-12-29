@@ -22,7 +22,7 @@ class HomeController extends Controller
         $author = "Amanullah Nilger";
         return view('frontend.home.about')->with("title",$data1)
         ->with("subtitle",$data2)
-        ->with("description",$descriptioin)
+        ->with("description",$description)
         ->with("author",$author);
     }
 }

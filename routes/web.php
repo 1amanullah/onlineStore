@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+// use App\Http\Controllers\Frontend\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,12 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    // return view('welcome');
-    // $viewData = [];
-    // $viewData['title'] = "Home Page - Online Shopping";
-    // return view('frontend.home.index')->with("viewData",$viewData);
-});
+// Route::get('/', function () {
+//     // return view('welcome');
+//     $viewData = [];
+//     $viewData['title'] = "Home Page - Online Shopping";
+//     return view('frontend.home.index')->with("viewData",$viewData);
+// });
 
- Route::get('/about',' App\Http\Controllers\Frontend\HomeController@about')->name('about-us');
- 
+Route::get('/','App\Http\Controllers\Frontend\HomeController@index')->name('index');
+Route::get('/about','App\Http\Controllers\Frontend\HomeController@about')->name('about-us');
+Route::get('/product','App\Http\Controllers\Frontend\ProductController@index')->name('product');
+Route::get('/product/{id}','App\Http\Controllers\Frontend\ProductController@show')->name('product.show');
