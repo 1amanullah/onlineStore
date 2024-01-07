@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    public static $product = [
+    public static $products = [
         ["id"=>"1","name"=>"TV","description"=>"Best TV","image"=>"game.png","price"=>"1000"],
         ["id"=>"2","name"=>"iPhone","description"=>"Best iPhone","image"=>"safe.png","price"=>"999"],
         ["id"=>"3","name"=>"Chromecast","description"=>"Best Chromecast","image"=>"submarine.png","price"=>"30"],
@@ -18,18 +18,19 @@ class ProductController extends Controller
     {
         $viewData = [];
         $viewData["title"] = "Product - Online Shopping";
-        $viewData["subtitle"] = "List of Product";
-        $viewData["products"] = ProductController::$product;
+        $viewData["subtitle"] = "List of Products";
+        $viewData["products"] = ProductController::$products;
         return view('frontend.product.index')->with("viewData",$viewData);
     }
 
     public function show($id)
     {
         $viewData = [];
-        $product = ProductController::$product[$id-1];
+        $product = ProductController::$products[$id-1];
         $viewData["title"] = $product["name"]."- Online Shopping";
         $viewData["subtitle"] = $product["name"]."- Product information";
-        $viewData["products"] = $product;
+        $viewData["product"] = $product;
+        // dd($viewData["product"]["image"]);
         return view('frontend.product.show')->with("viewData",$viewData);
     }
 }
