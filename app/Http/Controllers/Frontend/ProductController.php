@@ -28,11 +28,15 @@ class ProductController extends Controller
     public function show($id)
     {
         $viewData = [];
-        $product = Product::findOrFail($id);
+        $product = Product::find($id);
+        if(!$product)
+        {
+            abort(404);
+        }
         $viewData["title"] = $product->getName()."- Online Shopping";
         $viewData["subtitle"] = $product->getName()."- Product information";
         $viewData["product"] = $product;
-        // dd($viewData["product"]["image"]);
+        // dd($viewData["title"]);
         return view('frontend.product.show')->with("viewData",$viewData);
     }
 }
