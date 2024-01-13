@@ -22,5 +22,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/','App\Http\Controllers\Frontend\HomeController@index')->name('index');
 Route::get('/about','App\Http\Controllers\Frontend\HomeController@about')->name('about-us');
-Route::get('/product','App\Http\Controllers\Frontend\ProductController@index')->name('product');
-Route::get('/product/{id}','App\Http\Controllers\Frontend\ProductController@show')->name('product.show');
+Route::get('/product','App\Http\Controllers\Frontend\ProductController@index')->name('product.index');
+Route::get('/product/{id}','App\Http\Controllers\Frontend\ProductController@show')->name('products  .show');

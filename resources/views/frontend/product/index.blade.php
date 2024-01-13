@@ -8,10 +8,10 @@
      
        <div class="col-md-4 col-md-3 mb-2">
           <div class="card">
-            <img src="{{asset('/img/'.$product["image"])}}" alt="" class="card-img-top img-card">
+            <img src="{{asset('/img/'.$product->getImage())}}" alt="" class="card-img-top img-card">
             <div class="card-body text-center">
-                <a href="{{route('product.show',['id'=>$product["id"]])}}"
-                  class=" btn bg-primary text-white">{{$product["name"]}}
+                <a href="{{route('product.show',['id'=>$product->getId()])}}"
+                  class=" btn bg-primary text-white">{{$product->getName()}}
                 </a>
             </div>
           </div>

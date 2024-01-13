@@ -25,8 +25,14 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
-        }
+        },
+        "classmap": [
+            "app/Providers/AppServiceProvider.php"
+        ]
     },
+    
+    
+    
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/"
