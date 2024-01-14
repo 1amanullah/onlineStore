@@ -20,7 +20,7 @@
                 <li><a href="{{route('admin.home.index')}}" class="nav-link text-white">Admin - Home</a></li>
                 <li><a href="#" class="nav-link text-white">Admin - Products</a></li>
                 <li>
-                    <a href="{{route('home.index')}}" class="nav-link text-white"> Go back to home page</a>
+                    <a href="{{route('admin.home.index')}}" class="nav-link text-white"> Go back to home page</a>
                 </li>
             </ul>
         </div>
