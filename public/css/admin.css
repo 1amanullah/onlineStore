@@ -2,7 +2,7 @@
     background-color: #1a252f;
 }
 
-.fixed{
+div.fixed{
     -ms-flex: 0 0 250px;
     flex: 0 0 250px;
 }

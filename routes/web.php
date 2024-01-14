@@ -25,3 +25,5 @@ Route::get('/about','App\Http\Controllers\Frontend\HomeController@about')->name(
 Route::get('/product','App\Http\Controllers\Frontend\ProductController@index')->name('product.index');
 Route::get('/product/{id}','App\Http\Controllers\Frontend\ProductController@show')->name('products.show');
 Route::get('/admin','App\Http\Controllers\Backend\AdminHomeController@index')->name('admin.home.index');
+Route::get('/admin/products','App\Http\Controllers\Backend\AdminProductController@index')->name('admin.product.index');
+

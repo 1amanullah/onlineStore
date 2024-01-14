@@ -20,13 +20,13 @@
                 <li><a href="{{route('admin.home.index')}}" class="nav-link text-white">Admin - Home</a></li>
                 <li><a href="#" class="nav-link text-white">Admin - Products</a></li>
                 <li>
-                    <a href="{{route('admin.home.index')}}" class="nav-link text-white"> Go back to home page</a>
+                    <a href="{{route('admin.home.index')}}" class="nav-link text-white bg-"> Go back to home page</a>
                 </li>
             </ul>
         </div>
        {{-- sidebar  --}}
        <div class="col content-grey">
-        <nav class="p-3 shadow text-end">Admin
+        <nav class="p-3 shadow text-end">
          <span class="profile-font">Admin</span>
          <img src="{{asset('/img/undraw_profile.svg')}}" alt="" class="img-profile">
         </nav>
