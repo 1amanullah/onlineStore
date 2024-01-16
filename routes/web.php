@@ -26,4 +26,4 @@ Route::get('/product','App\Http\Controllers\Frontend\ProductController@index')->
 Route::get('/product/{id}','App\Http\Controllers\Frontend\ProductController@show')->name('products.show');
 Route::get('/admin','App\Http\Controllers\Backend\AdminHomeController@index')->name('admin.home.index');
 Route::get('/admin/products','App\Http\Controllers\Backend\AdminProductController@index')->name('admin.product.index');
-
+Route::post('/admin/products/store','App\Http\Controllers\Backend\AdminProductController@store')->name('admin.product.store');
