@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\Models\Product;
 class AdminProductController extends Controller
 {
@@ -22,6 +23,17 @@ class AdminProductController extends Controller
         $newProduct->setPrice($request->input('price'));
         $newProduct->setImage('game.png');
         $newProduct->save();
+
+        if($request->hasFile('image'))
+        {
+          $imageName = $newProduct->getId(). '.' .$request->file('image')->e;xtention();
+          Storage::disk('public')->put(
+            $imageName,
+            file_get_contents($request->file('image')->getRealPath())
+          );
+          $newProduct->setImage($imageName);
+          $newProduct->save();
+        }
         
         return back();
     }
