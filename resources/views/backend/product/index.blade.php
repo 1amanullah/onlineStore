@@ -87,8 +87,23 @@
                     <tr>
                         <td>{{$product->id}}</td>
                         <td>{{strtoupper($product->name)}}</td>
-                        <td>Edit</td>
-                        <td>Delete</td>
+                        <td>
+                            {{-- <button class="btn btn-primary"> --}}
+                                <a href="{{route('admin.product.edit',['id'=>$product->id])}}" class="btn btn-primary">
+                                    <i class="bi-pencil"></i>
+                                </a>
+                            {{-- </button> --}}
+                        </td>
+                       
+                        <td>
+                            <form action="{{route('admin.product.delete',$product->id)}}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <button class="btn btn-danger">
+                                   <i class="bi-trash"></i>
+                                </button>
+                              </form>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>
