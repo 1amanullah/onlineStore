@@ -47,7 +47,7 @@
                             <div class="col-lg-10 col-md-6 col-sm-12">
                                 <div class="mb-3">
                                     <label for="" class="form-label">Choose file</label>
-                                    <input type="file" class="form-control"name="Image" />
+                                    <input type="file" class="form-control"name="image" />
                                 </div>
                             </div>
                             <div class="col">
@@ -85,8 +85,8 @@
             <tbody>
                 @foreach ($viewData["products"] as $product)
                     <tr>
-                        <td>{{$product->getId()}}</td>
-                        <td>{{$product->getName()}}</td>
+                        <td>{{$product->id}}</td>
+                        <td>{{strtoupper($product->name)}}</td>
                         <td>Edit</td>
                         <td>Delete</td>
                     </tr>

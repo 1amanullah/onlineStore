@@ -29,12 +29,9 @@ class ProductController extends Controller
     {
         $viewData = [];
         $product = Product::find($id);
-        if(!$product)
-        {
-            abort(404);
-        }
-        $viewData["title"] = $product->getName()."- Online Shopping";
-        $viewData["subtitle"] = $product->getName()."- Product information";
+       
+        $viewData["title"] = $product->name."- Online Shopping";
+        $viewData["subtitle"] = $product->name."- Product information";
         $viewData["product"] = $product;
         // dd($viewData["title"]);
         return view('frontend.product.show')->with("viewData",$viewData);
