@@ -28,21 +28,18 @@
                     </div>
                 </div>
                </div>
-                <div class="col">
+                
+                 <div class="col">
                     <div class="mb-3 row">
-                        <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">
-                            Price:    
-                        </label>
-                        <div class="col-lg-10 col-md-6 col-sm-12">
-                            <input type="number" name="price" value="{{old('price')}}" id="" class="form-control">
-                        </div>
+                        <label for="" class="col-lg-2 col-md-6 col-sm-12 col-form-label">Price: </label>
                     </div>
-                </div>
+                 </div>
+
                 <div class="row">
                     <div class="col">
                         <div class="mb-3 row">
                             <label for="" class="col-lg-2 col-md-6 col-sm-12 col-form-label">
-                                Image:
+                                Image
                             </label>
                             <div class="col-lg-10 col-md-6 col-sm-12">
                                 <div class="mb-3">
@@ -50,6 +47,7 @@
                                     <input type="file" class="form-control"name="image" />
                                 </div>
                             </div>
+
                             <div class="col">
                                 &nbsp;
                             </div>
@@ -57,8 +55,8 @@
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label for="" class="form-control">Description</label>
-                    <textarea name="description" id="" cols="40" rows="5">{{old('description')}}</textarea>
+                    <label for="" class="form-label">Description</label>
+                    <textarea name="description" id="" rows="3" class="form-control">{{old('description')}}</textarea>
                 </div>
             </div>
             
