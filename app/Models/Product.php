@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
   // use HasF; hhgjnbmn actory;
-  protected $fillable = ['name','description','price','image'];
+  protected $fillable = ['name','description','price','image','balance'];
 
   public static function validate($request)
   {
