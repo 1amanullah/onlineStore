@@ -10,6 +10,7 @@ use App\Models\Item;
 class Order extends Model
 {
     // use HasFactory;
+    protected $fillable =  ['total','user_id'];
 
 
     public static function validate($request)
@@ -29,7 +30,5 @@ class Order extends Model
     {
         return $this->hasMany(Item::class);
     }
-
-    protected $fillable =  ['total','user_id','user','items'];
     
 }
