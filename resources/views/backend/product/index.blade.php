@@ -2,7 +2,7 @@
 @section('title',$viewData['title'])
 @section('content')
 
-<div class="card mb-4">
+<div class="card mb-4" >
     <div class="card-header">
         Create Products
     </div>
@@ -33,7 +33,7 @@
                     <div class="mb-3 row">
                         <label for="" class="col-lg-2 col-md-6 col-sm-12 col-form-label">Price: </label>
                         <div class="col-lg-10 col-md-6 col-sm-12">
-                            <input type="number" name="name" id="" value="{{old('price')}}" class="form-control">
+                            <input type="number" name="price" id="" value="{{old('price')}}" class="form-control">
                         </div>
                     </div>
                  </div>
@@ -47,7 +47,7 @@
                             <div class="col-lg-10 col-md-6 col-sm-12">
                                 <div class="mb-3">
                                     <label for="" class="form-label">Choose file</label>
-                                    <input type="file" class="form-control"name="image" />
+                                    <input type="file" class="form-control" name="image"  value="{{old('image')}}"/>
                                 </div>
                             </div>
 
@@ -112,4 +112,4 @@
     </div>
 </div>
 
-@endsection 
+@endsection  

@@ -43,7 +43,7 @@
                         <div class="col-lg-10 col-md-6 col-sm-12">
                             <label for="" class="form-label">Choose file</label>
     
-                           <input type="file" name="image" class="form-control">
+                           <input type="file" name="image" value="{{old('image')}}" class="form-control">
                         </div>
                     </div>
                 </div>

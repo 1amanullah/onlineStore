@@ -52,7 +52,7 @@ class CartController extends Controller
         {
             $userId = Auth::user()->id;
             $order = new Order();
-            $order->userId;
+            $order->user_id = $userId;
             $order->total=0;
             $order->save();
             
@@ -62,15 +62,15 @@ class CartController extends Controller
             {
                 $quantity = $productsInSession[$product->id];
                 $item = new Item();
-                $item->quantity;
-                $item->product->price;
-                $item->product->id;
-                $item->order->id;
+                $item->quantity = $quantity;
+                $item->price = $product->price;
+                $item->product_id = $product->id;
+                $item->order_id = $order->id;
                 $item->save();
                 $total = $total + ($product->price*$quantity);
             }
             
-            $order->total;
+            $order->total = $total;
             $order->save();
 
             $newBalance = Auth::user()->balance-$total;
@@ -82,7 +82,7 @@ class CartController extends Controller
             $viewData = [];
             $viewData["title"] = "Purchase - Online Shopping";
             $viewData["subtitle"] = "Purchase Status";
-            $viewData["order"] = $orde;
+            $viewData["order"] = $order;
             return view('frontend.cart.purchase')->with('viewData',$viewData);
         }
 
