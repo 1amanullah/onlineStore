@@ -32,6 +32,9 @@
                  <div class="col">
                     <div class="mb-3 row">
                         <label for="" class="col-lg-2 col-md-6 col-sm-12 col-form-label">Price: </label>
+                        <div class="col-lg-10 col-md-6 col-sm-12">
+                            <input type="number" name="name" id="" value="{{old('price')}}" class="form-control">
+                        </div>
                     </div>
                  </div>
 
