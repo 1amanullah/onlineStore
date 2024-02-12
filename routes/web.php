@@ -31,7 +31,8 @@ Route::post('/cart/add/{id}','App\Http\Controllers\Frontend\CartController@add')
 
 Route::middleware('auth')->group(function(){
 
-    Route::get('cart/purchase','App\Http\Controllers\Frontend\CartController@purchase')->name('cart.purchase');
+    Route::get('/cart/purchase','App\Http\Controllers\Frontend\CartController@purchase')->name('cart.purchase');
+    Route::get('/my-account/orders','App\Http\Controllers\Frontend\MyAccountController@orders')->name('myaccount.orders');
 
 });
 
