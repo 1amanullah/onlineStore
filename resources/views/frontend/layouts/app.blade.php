@@ -23,6 +23,7 @@
                     <a class="nav-link active" href="{{route('product.index')}}">Product</a>
                     <a class="nav-link active" href="{{route('cart.index')}}">Cart</a>
                     <a class="nav-link active" href="{{route('about-us')}}">About</a>
+                    {{-- <a href="#" class="nav-link active">{{$user->name}}</a> --}}
                     <div class="vr bg-white max-2 d-none d-lg-block"></div>
                     @guest
                         <a href="{{route('login')}}" class="nav-link active">Login</a>
