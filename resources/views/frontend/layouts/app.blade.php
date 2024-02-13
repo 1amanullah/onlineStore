@@ -30,9 +30,8 @@
                         @else
                         <a href="{{route('myaccount.orders')}}" class="nav-link active">My Orders</a>
                         <form id="logout" action="{{route('logout')}}" method="post">
-                        
+                            @csrf                        
                             <a role="button" class="nav-link active" onclick="document.getElementById('logout').submit();">Logout</a>
-                            @csrf
                         </form>
                     @endguest
                 </div>
