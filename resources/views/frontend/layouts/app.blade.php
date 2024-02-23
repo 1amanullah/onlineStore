@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>@yield('title','Online Store')</title>
 </head>
 <body>
@@ -23,7 +24,6 @@
                     <a class="nav-link active" href="{{route('product.index')}}">Product</a>
                     <a class="nav-link active" href="{{route('cart.index')}}">Cart</a>
                     <a class="nav-link active" href="{{route('about-us')}}">About</a>
-                    {{-- <a href="#" class="nav-link active">{{$user->name}}</a> --}}
                     <div class="vr bg-white max-2 d-none d-lg-block"></div>
                     @guest
                         <a href="{{route('login')}}" class="nav-link active">Login</a>
@@ -43,7 +43,18 @@
     <div class="container d-flex align-item-center flex-column">
 
       <h2>@yield('subtitle','Online Shopping')</h2>
+   
+      
+      
     </div>
+    <div style="text-align:end; padding-right:3%;">
+        @auth
+         <h4>
+            <i class="bi bi-person-circle"></i>
+            <a href="#" class="nav-link active">{{Auth::user()->name}}</a>
+         </h4>    
+        @endauth
+      </div>
    </header>
    <div class="container my-4">
       @yield('content')

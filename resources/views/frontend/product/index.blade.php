@@ -7,7 +7,7 @@
     @foreach ($viewData["products"] as $product)
      
        <div class="col-md-4 col-md-3 mb-2" >
-          <div class="card" style="width: 22rem;">
+          <div class="card">
             {{-- <img src="{{asset('/img/'.$product->getImage())}}" alt="" class="card-img-top img-card"> --}}
             
              <img src="{{asset('/storage/'.$product->image)}}" class="card-img-top" alt="" srcset="">

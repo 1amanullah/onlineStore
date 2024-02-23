@@ -33,3 +33,17 @@ nav
     height: 18vw;
     object-fit: cover;
 }
+
+/* @media(min-width: 1024px) 
+{
+ 
+     div.container
+    {
+        max-width:1000px;
+    }
+    
+    .card-img-top
+    {
+      width: 60%;
+    }  
+} */
