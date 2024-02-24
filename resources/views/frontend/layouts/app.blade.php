@@ -50,8 +50,7 @@
     <div style="text-align:end; padding-right:3%;">
         @auth
          <h4>
-            <i class="bi bi-person-circle"></i>
-            <a href="#" class="nav-link active">{{Auth::user()->name}}</a>
+            <a href="#" class="nav-link active"><i class="bi bi-person-circle"></i> {{Auth::user()->name}}</a>
          </h4>    
         @endauth
       </div>
