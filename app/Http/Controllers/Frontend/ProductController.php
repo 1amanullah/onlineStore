@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Models\Product;
 
 class ProductController extends Controller
@@ -22,14 +23,15 @@ class ProductController extends Controller
         $viewData["subtitle"] = "List of Products";
         // $viewData["products"] = ProductController::$products;
         $viewData["products"] = Product::all();
-        return view('frontend.product.index')->with("viewData",$viewData);
+        $products = Product::paginate(1);
+        return view('frontend.product.index',compact('products'))->with("viewData",$viewData);
     }
 
     public function show($id)
     {
         $viewData = [];
         $product = Product::find($id);
-       
+    
         $viewData["title"] = $product->name."- Online Shopping";
         $viewData["subtitle"] = $product->name."- Product information";
         $viewData["product"] = $product;
