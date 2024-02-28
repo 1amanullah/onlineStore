@@ -109,6 +109,7 @@
                 @endforeach
             </tbody>
         </table>
+        {{$viewData['products']->links()}}
     </div>
 </div>
 

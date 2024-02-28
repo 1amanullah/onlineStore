@@ -23,8 +23,8 @@ class ProductController extends Controller
         $viewData["subtitle"] = "List of Products";
         // $viewData["products"] = ProductController::$products;
         $viewData["products"] = Product::all();
-        $products = Product::paginate(1);
-        return view('frontend.product.index',compact('products'))->with("viewData",$viewData);
+        // $products = Product::paginate(1);
+        return view('frontend.product.index')->with("viewData",$viewData);
     }
 
     public function show($id)

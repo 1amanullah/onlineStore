@@ -7,10 +7,10 @@
     @foreach ($viewData["products"] as $product)
      
        <div class="col-md-4 col-md-3 mb-2" >
-          <div class="card">
+          <div class="card" style="height: 100%">
             {{-- <img src="{{asset('/img/'.$product->getImage())}}" alt="" class="card-img-top img-card"> --}}
             
-             <img src="{{asset('/storage/'.$product->image)}}" class="card-img-top" alt="" srcset="">
+             <img src="{{asset('/storage/'.$product->image)}}" class="card-img-top"  alt="" srcset="">
             <div class="card-body text-center">
                 <a href="{{route('products.show',['id'=>$product->id])}}"
                   class=" btn bg-primary text-white">{{strtoupper($product->name)}}
@@ -20,7 +20,8 @@
        </div>  
  
     @endforeach
+    {{-- {{$products->links()}} --}}
+
 </div>
-{{-- {{$products->links()}} --}}
 
 @endsection

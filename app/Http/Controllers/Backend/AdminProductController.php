@@ -38,7 +38,7 @@ class AdminProductController extends Controller
     {
         $viewData = [];
         $viewData["title"] = "Admin Page - Products - Online Store";
-        $viewData["products"] = Product::all();
+        $viewData["products"] = Product::paginate(5);
         return view('backend.product.index')->with('viewData',$viewData);
     }
 

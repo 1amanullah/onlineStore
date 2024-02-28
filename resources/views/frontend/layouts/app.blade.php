@@ -19,7 +19,9 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                
                 <div class="navbar-nav ms-auto">
+                    
                     <a class="nav-link active" href="{{route('index')}}">Home</a>
                     <a class="nav-link active" href="{{route('product.index')}}">Product</a>
                     <a class="nav-link active" href="{{route('cart.index')}}">Cart</a>
@@ -34,6 +36,13 @@
                             @csrf                        
                             <a role="button" class="nav-link active" onclick="document.getElementById('logout').submit();">Logout</a>
                         </form>
+                        <div >
+                            @auth
+                             <h4>
+                                <a href="#" class="nav-link active"><i class="bi bi-person-circle"></i> {{Auth::user()->name}}</a>
+                             </h4>    
+                            @endauth
+                          </div>
                     @endguest
                 </div>
             </div>
@@ -47,13 +56,7 @@
       
       
     </div>
-    <div style="text-align:end; padding-right:3%;">
-        @auth
-         <h4>
-            <a href="#" class="nav-link active"><i class="bi bi-person-circle"></i> {{Auth::user()->name}}</a>
-         </h4>    
-        @endauth
-      </div>
+    
    </header>
    <div class="container my-4">
       @yield('content')
