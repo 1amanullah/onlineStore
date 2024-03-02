@@ -100,7 +100,7 @@
                             <form action="{{route('admin.product.delete',$product->id)}}" method="post">
                                 @csrf
                                 @method('DELETE')
-                                <button class="btn btn-danger">
+                                <button class="btn btn-danger" >
                                    <i class="bi-trash"></i>
                                 </button>
                               </form>

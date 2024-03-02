@@ -62,16 +62,16 @@ class AdminProductController extends Controller
     Product::validate($request);
 
      $product = Product::findOrFail($id);
-     $product->name = $request->name;
-     $product->description = $request->description;
-     $product->price = $request->price;
-
+     
      if($request->hasFile('image'))
      {
        $imageName = $product->id.'.'.$request->file('image')->extension();
        $request->file('image')->storeAs('public',$imageName);
        $product->image = $imageName;
      }
+     $product->name = $request->name;
+     $product->description = $request->description;
+     $product->price = $request->price;
      $product->save();
     return redirect()->route('admin.product.index');
 
